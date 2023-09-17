@@ -9,6 +9,10 @@ build:
 build-xinput:
 	cargo build --release --features xinput --no-default-features
 
+.PHONY: install-xinput
+install-xinput:
+	cargo install --path . --features xinput --no-default-features
+
 .PHONY: build-deb
 build-deb: build
 	cargo deb --no-build
